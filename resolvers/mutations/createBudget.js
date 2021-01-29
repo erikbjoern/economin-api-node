@@ -1,9 +1,7 @@
-const models = require("../../models");
+const createBudget = async (parent, { input }, context) => {
+  const newBudget = await context.db.budgets.create({ data: input });
 
-const createBudget = async (parent, { input }) => {
-  const newBudget = await models.Budget.create(input);
-
-  return newBudget
+  return newBudget;
 };
 
 module.exports = createBudget;

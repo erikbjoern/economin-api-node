@@ -3,13 +3,13 @@ const { gql } = require('apollo-server-express');
 const typeDefs = gql`
   type Budget {
     amount: Int, 
-    start_date: String, 
-    end_date: String 
+    startDate: String, 
+    endDate: String 
   }
   input CreateBudgetInput {
     amount: Int,
-    start_date: String,
-    end_date: String
+    startDate: String,
+    endDate: String
   }
   type Query {
     budgets: String
