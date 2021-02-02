@@ -7,8 +7,9 @@ const typeDefs = gql`
   }
 
   type Budget {
+    id: Int,
     amount: Int, 
-    startDate: Int, 
+    startDay: Int, 
     startMonth: Int,
     startYear: Int,
     length: Int,
@@ -18,7 +19,7 @@ const typeDefs = gql`
 
   input CreateBudgetInput {
     amount: Int, 
-    startDate: Int, 
+    startDay: Int, 
     startMonth: Int,
     startYear: Int,
     length: Int,
@@ -27,7 +28,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    budgets: String
+    currentBudget: Budget
   }
   
   type Mutation { 
