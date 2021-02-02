@@ -9,9 +9,18 @@ datasource db {
 
 model Budgets {
   id        Int      @id @default(autoincrement())
-  amount    Int?
-  startDate String?
-  endDate   String?
+  amount    Int
+  startDate Int
+  startMonth Int
+  startYear Int
+  length Int
+  unit UnitOfTime
+  recurring Boolean @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+enum UnitOfTime {
+  DAYS
+  MONTHS
 }
