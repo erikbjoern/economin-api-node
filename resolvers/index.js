@@ -1,8 +1,9 @@
 const createBudget = require("./mutations/createBudget");
+const currentBudget = require("./queries/currentBudget");
 
 module.exports = {
   Query: {
-    budgets: () => "This function is not implemented yet. Sorry."
+    currentBudget
   },
   Mutation: {
     createBudget,

@@ -10,7 +10,7 @@ datasource db {
 model Budgets {
   id        Int      @id @default(autoincrement())
   amount    Int
-  startDate Int
+  startDay Int
   startMonth Int
   startYear Int
   length Int
